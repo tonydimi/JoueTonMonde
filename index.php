@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  
+  </head>
+
+<body>
+
 <audio src="lorie.mp3" style="display:none" id="player">
 <a href="#" title="Lancer la lecture"><img src="play.png" alt="Lecture" id="btnplay"></a>
 <a href="#" title="Mettre en pause"><img src="pause.png" alt="Pause" id="btnpause"></a>
@@ -11,3 +20,7 @@ document.getElementById('btnpause').onclick = function() {
   return false;
 }
 </script>
+
+</body>
+
+</html>
