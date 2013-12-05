@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-	<title>Joue ton monde</title>
-  </head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Bouton changeant</title>
+<link href="bouton.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
 
 <body>
+<h1>Bouton changeant</h1>
+<button id='playpause'class="noplaying"><span>Jouer</span></button>
 
-
-<a href="#" title="Lancer la lecture"><img src="image/play.png" alt="Lecture" id="btnplay"></a>
-<a href="#" title="Mettre en pause"><img src="image/pause.png" alt="Pause" id="btnpause"></a>
-<script>
-document.getElementById('btnplay').onclick = function() {
-  document.getElementById('player').play();
-  return false;
-}
-document.getElementById('btnpause').onclick = function() {
-  document.getElementById('player').pause();
-  return false;
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$('#playpause').click(function() {
+                               
+  if ($(this).hasClass("playing")) {  
+      $('#playpause span').text("");
+      $(this).removeClass("playing").addClass("noplaying");
+  }
+  else {
+        $(this).removeClass("noplaying").addClass("playing");
+        $('#playpause span').text("");
+  }
+});
 </script>
-
 </body>
-
 </html>
