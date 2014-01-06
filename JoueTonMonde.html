@@ -7,6 +7,31 @@
 </head>
 
 <body>
+	<audio preload="auto" autobuffer controls id="audio">
+		<source src="04_1904.ogg" type="audio/ogg" />
+		<source src="test.mp3" type="audio/mpeg" />
+		<source src="test.wav" type="audio/wav" />
+		Votre fureteur ne supporte pas les objects audio.
+	</audio> <!-- See more at: http://beta.rdsign.net/article_81#sthash.igRJVOQj.dpuf -->
+	
+	<a href="#" class="play">Play</a>
+	<a href="#" class="pause">Pause</a>
+	<a href="#" class="stop">Stop</a>
 
+	<script type="text/javascript">	
+		var audio = document.getElementById('audio');
+			$('.audiocontrols a.play').on('click',function(e){
+			e.preventDefault(); audio.play();
+			});
+			$('.audiocontrols a.pause').on('click',function(e){
+			e.preventDefault();
+			audio.pause();
+			});
+			$('.audiocontrols a.stop').on('click',function(e){
+			e.preventDefault();
+			audio.pause();
+			audio.currentTime=0;
+			});
+	</script>
 </body>
 </html>
