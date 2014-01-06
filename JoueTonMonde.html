@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />
 <title>Joue ton Monde !</title>
-<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+
 	<style>
 	audio{display:none}
 	.container {width:500px;}
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div class="container">
+<div class="container">
 	<div class="unPlayer">
 	    <audio preload="auto" autobuffer controls id="audio1">
 	        <source src="204535_2244250-lq.ogg" type="audio/ogg"  />
@@ -23,16 +23,15 @@
 	        <source src="test.wav" type="audio/wav" />
 	    </audio>
 	    <div class="audiocontrols">
-	        <a href="#" class="play" data-audio="audio1"><i class="glyphicon glyphicon-play"></i></a>
-	        <a href="#" class="pause" data-audio="audio1"><i class="glyphicon glyphicon-pause"></i></a>
-	        <a href="#" class="stop" data-audio="audio1"><i class="glyphicon glyphicon-stop"></i></a>
+	        <a href="#" class="play" data-audio="audio1"><img width="10" height="10"src="playicon.png"></a>
+	        <a href="#" class="pause" data-audio="audio1"><img width="10" height="10"src="pauseicon.png"></a>
 	        <div class="volume">
 	            <a href="#" class="down" data-audio="audio1"><i class="glyphicon glyphicon-volume-down"></i></a>
 	            <div class="slider" data-audio="audio1"><span class="knob"></span></div>
 	            <a href="#" class="up" data-audio="audio1"><i class="glyphicon glyphicon-volume-up"></i></a>
 	        </div>
 	    </div>
-    </div>
+</div>
 	
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
