@@ -2,18 +2,18 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Joue ton Monde !</title>
+<title>360&deg; MP3 player UI demo (SoundManager 2): Javascript + Canvas Visualization</title>
 <meta name="robots" content="noindex" />
-
+<meta name="description" content="Javascript + Canvas + SoundManager 2: 360-degree circular control / jog wheel example for playing MP3 links, with EQ and spectrum visualization options" />
 <!-- demo, make the fonts nicer etc. -->
-<link rel="stylesheet" type="text/css" href="CSS/index.css" />
+<link rel="stylesheet" type="text/css" href="../index.css" />
 
 <!-- soundManager.useFlashBlock: related CSS -->
-<link rel="stylesheet" type="text/css" href="CSS/flashblock.css" />
+<link rel="stylesheet" type="text/css" href="../flashblock/flashblock.css" />
 
 <!-- required -->
-<link rel="stylesheet" type="text/css" href="CSS/360player.css" />
-<link rel="stylesheet" type="text/css" href="CSS/360player-visualization.css" />
+<link rel="stylesheet" type="text/css" href="360player.css" />
+<link rel="stylesheet" type="text/css" href="360player-visualization.css" />
 
 <!-- special IE-only canvas fix -->
 <!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
@@ -22,10 +22,10 @@
 <script type="text/javascript" src="script/berniecode-animator.js"></script>
 
 <!-- the core stuff -->
-<script type="text/javascript" src="script/soundmanager2.js"></script>
+<script type="text/javascript" src="../../script/soundmanager2.js"></script>
 <script type="text/javascript" src="script/360player.js"></script>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
 soundManager.setup({
   // path to directory containing SM2 SWF
@@ -67,7 +67,7 @@ if (window.location.href.match(/html5/i)) {
   soundManager.useHTML5Audio = true;
 }
 
-</script> -->
+</script>
 
 <!-- DEMO only, customization UI: Yahoo! YUI colorpicker stuff -->
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/slider/assets/skins/sam/slider.css" />
@@ -79,7 +79,7 @@ if (window.location.href.match(/html5/i)) {
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/colorpicker/colorpicker-min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="CSS/demo.css" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
 <style type="text/css">
 
 body {
@@ -110,8 +110,8 @@ pre.block {
 </style>
 
 <!-- demo configuration stuff, you don't need this -->
-<link rel="stylesheet" type="text/css" href="CSS/demo-slider-controls.css" />
-<script type="text/javascript" src="script/demo-slider-controls.js"></script>
+<link rel="stylesheet" type="text/css" href="demo-slider-controls.css" />
+<script type="text/javascript" src="demo-slider-controls.js"></script>
 
 </head>
 
@@ -119,8 +119,9 @@ pre.block {
 	
 <div id="left">
 
- 
- 
+ <h1><a href="http://www.schillmania.com/projects/soundmanager2/" title="Javascript MP3 player project home">SoundManager 2</a> / <a href="http://schillmania.com/projects/soundmanager2/demo/360-player/">360&deg; Player Demo</a>: JS + Canvas Visualization</h1>
+
+ <p class="note" style="color:#666;margin-top:0.5em;margin-bottom:0.5em">Canvas-based UI with visualization options. <b>Note: Spectrum/EQ visualizations disabled for IE &lt; 9 (too slow.) Data is not implemented under HTML5.</b></p>
  <p class="note" style="color:#666;margin-bottom:0.5em">You can also <a href="#debug=1" onclick="window.location.href = this.href;window.location.reload()" title="Enable debug mode, show frames per second">show FPS</a><span id="config-link"> or <a href="#customize" onclick="window.location.href=this.href;window.location.reload()">customize the UI</a></span><span id="hifi">, or see the <a href="#hifi=1" onclick="window.location.href=this.href;window.location.reload()">hi-fi version</a></span>. Check the <a href="canvas-visualization-basic.html">basic template</a> for a minimal code example; also see the <a href="../360-player/" title="360&deg; player UI">default 360&deg; UI</a>.</p>
 
 	<!-- customization crap -->
