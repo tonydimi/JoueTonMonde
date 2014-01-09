@@ -18,13 +18,13 @@
 <div class="container">
 	<div class="unPlayer">
 	    <audio preload="auto" autobuffer controls id="audio1">
-	        <source src="204535_2244250-lq.ogg" type="audio/ogg"  />
+	        <source src="test.ogg" type="audio/ogg"  />
 	        <source src="test.mp3" type="audio/mpeg" />
 	        <source src="test.wav" type="audio/wav" />
 	    </audio>
 	    <div class="audiocontrols">
-	        <a href="#" class="play" data-audio="audio1"><img width="10" height="10"src="playicon.png"></a>
-	        <a href="#" class="pause" data-audio="audio1"><img width="10" height="10"src="pauseicon.png"></a>
+	        <a href="#" class="play" data-audio="audio1"><img width="10" height="10" src="playicon.png" /></a>
+	        <a href="#" class="pause" data-audio="audio1"><img width="10" height="10" src="pauseicon.png" /></a>
 	        <div class="volume">
 	            <a href="#" class="down" data-audio="audio1"><i class="glyphicon glyphicon-volume-down"></i></a>
 	            <div class="slider" data-audio="audio1"><span class="knob"></span></div>
@@ -38,6 +38,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
+
 (function($){
 
 	$('.audiocontrols a.play').on('click',function(e){
@@ -103,6 +104,61 @@
 
 </script>
 
-</script>
+<button id="playbutton" onclick="togglePlay();">Play</button>  
+  <button onclick="increaseSpeed();">Increase speed</button>
+  <button onclick="decreaseSpeed();">Decrease speed</button><br />
+  <div id="rate"></div>
+
+     <script type="text/javascript">
+       // Create a couple of global variables to use. 
+       var audioElm = document.getElementById("audio1"); // Audio element
+       var ratedisplay = document.getElementById("rate"); // Rate display area
+
+       // Hook the ratechange event and display the current playbackRate after each change
+       audioElm.addEventListener("ratechange", function () {
+         ratedisplay.innerHTML = "Rate: " + audioElm.playbackRate;
+       }, false);
+
+       //  Alternates between play and pause based on the value of the paused property
+       function togglePlay() {
+         if (document.getElementById("audio1")) {
+
+           if (audioElm.paused == true) {
+             playAudio(audioElm);    //  if player is paused, then play the file
+           } else {
+             pauseAudio(audioElm);   //  if player is playing, then pause
+           }
+         }
+       }
+
+       function playAudio(audioElm) {
+         document.getElementById("playbutton").innerHTML = "Pause"; // Set button text == Pause
+         // Get file from text box and assign it to the source of the audio element 
+         audioElm.src = document.getElementById('audioFile').value;
+         audioElm.play();
+       }
+
+       function pauseAudio(audioElm) {
+         document.getElementById("playbutton").innerHTML = "play"; // Set button text == Play
+         audioElm.pause();
+       }
+
+       // Increment playbackRate by 1 
+       function increaseSpeed() {
+         audioElm.playbackRate += 1;
+       }
+
+       // Cut playback rate in half
+       function decreaseSpeed() {
+         if (audioElm.playbackRate <= 1) {
+           var temp = audioElm.playbackRate;
+           audioElm.playbackRate = (temp / 2); 
+         } else {
+           audioElm.playbackRate -= 1;
+         }
+       }
+
+     </script>
+
 </body>
 </html>
