@@ -128,7 +128,7 @@
  top:0px;
  width:214px;
  height:20px;
- background:transparent url(../_image/slider-bar.gif) no-repeat 0px 9px;
+ background:transparent url(../images/slider-bar.gif) no-repeat 0px 9px;
  cursor:pointer;
  cursor:hand;
 }
@@ -139,35 +139,35 @@
  top:0px;
  width:20px;
  height:20px;
- background:transparent url(../_image/slider.png) no-repeat 0px 0px;
+ background:transparent url(../images/slider.png) no-repeat 0px 0px;
  *background:none;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../_image/slider.png');
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../images/slider.png');
  cursor:pointer;
  cursor:hand;
 }
 
 #controls .control .slider:hover {
- background:transparent url(../_image/slider-1.png) no-repeat 0px 0px;
+ background:transparent url(../images/slider-1.png) no-repeat 0px 0px;
  *background:none;
 }
 
 #controls .control .slider.hover {
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../_image/slider-1.png');
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../images/slider-1.png');
 }
 
 #controls .disabled .control .slider {
- background:transparent url(../_image/slider-disabled.png) no-repeat 0px 0px;
+ background:transparent url(../images/slider-disabled.png) no-repeat 0px 0px;
  *background:none;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../_image/slider-disabled.png');
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../images/slider-disabled.png');
 }
 
 #controls .disabled .control .slider:hover {
- background:transparent url(../_image/slider-disabled-1.png) no-repeat 0px 0px;
+ background:transparent url(../images/slider-disabled-1.png) no-repeat 0px 0px;
  *background:none;
 }
 
 #controls .disabled .control .slider.hover {
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../_image/slider-disabled-1.png');
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=crop,src='../images/slider-disabled-1.png');
 }
 
 #controls input[type=text] {

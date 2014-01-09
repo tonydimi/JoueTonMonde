@@ -1973,10 +1973,10 @@ ul.graphic li a.sm2_link {
 }
 
 ul.graphic li a {
-  background:#ddd url(../demo/play-mp3-links/image/icon_play.png) no-repeat 3px 50%;
+  background:#ddd url(images/icon_play.png) no-repeat 3px 50%;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAA6ElEQVR42q2UvQqDMBRGC47dAj6rgygIDg5OfQlHF30GX0JFURddnEQU+eoNLaSJFRUvnPzA/c4QkjwA3AIf1tJWnitsRT8I+2Q0UfTM8/yFk0UZyooiNk0ThmE4BWUoK4r0cRxxBcr+iMh+AVW0LAtkoihCURS0/ocqwkaZpgnbtrmwrmts1DGR67owDIPjeR7iOEbXdfuisiwh4zgOSb5wcZIkYo8qapoGMpZlkYALwzBElmWoqkrsUUVt20LG930EQUAHTvstVFHf95BJ05TmPVQR3dQLKCI2zzOuQNnbHu3t38gtvAF1L6rpAc8MDwAAAABJRU5ErkJggg==);
-  *background-image: url(../demo/play-mp3-links/image/icon_play.png);
-  _background-image:url(../demo/play-mp3-links/image/icon_play.gif);
+  *background-image: url(images//icon_play.png);
+  _background-image:url(images//icon_play.gif);
 }
 
 ul.graphic li a:hover,
