@@ -24,12 +24,14 @@
 <!-- the core stuff -->
 <script type="text/javascript" src="script/soundmanager2.js"></script>
 <script type="text/javascript" src="script/360player.js"></script>
+<script type="text/javascript" src="script/excanvas.js" charset="utf-8"></script>
+<script src="script/soundmanager2-nodebug-jsmin.js" type="text/javascript"></script>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 
 soundManager.setup({
   // path to directory containing SM2 SWF
-  url: '../../swf/'
+  url: '/swf/'
 });
 
 threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
@@ -67,9 +69,9 @@ if (window.location.href.match(/html5/i)) {
   soundManager.useHTML5Audio = true;
 }
 
-</script> -->
+</script>
 
-<!-- DEMO only, customization UI: Yahoo! YUI colorpicker stuff 
+<!-- DEMO only, customization UI: Yahoo! YUI colorpicker stuff -->
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/slider/assets/skins/sam/slider.css" />
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/colorpicker/assets/skins/sam/colorpicker.css" />
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
@@ -77,7 +79,7 @@ if (window.location.href.match(/html5/i)) {
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/dragdrop/dragdrop-min.js"></script>
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/slider/slider-min.js"></script>
 <script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
-<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/colorpicker/colorpicker-min.js"></script> -->
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/colorpicker/colorpicker-min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="CSS/demo.css" />
 <style type="text/css">
@@ -111,7 +113,7 @@ pre.block {
 
 <!-- demo configuration stuff, you don't need this -->
 <link rel="stylesheet" type="text/css" href="CSS/demo-slider-controls.css" />
-<script type="text/javascript" src="script/demo-slider-controls.js"></script>
+<script type="text/javascript" src="script/demo-slider-controls.js"></script> 
 
 </head>
 
@@ -121,7 +123,7 @@ pre.block {
 
  
  
- <p class="note" style="color:#666;margin-bottom:0.5em">You can also <a href="#debug=1" onclick="window.location.href = this.href;window.location.reload()" title="Enable debug mode, show frames per second">show FPS</a><span id="config-link"> or <a href="#customize" onclick="window.location.href=this.href;window.location.reload()">customize the UI</a></span><span id="hifi">, or see the <a href="#hifi=1" onclick="window.location.href=this.href;window.location.reload()">hi-fi version</a></span>. Check the <a href="canvas-visualization-basic.html">basic template</a> for a minimal code example; also see the <a href="../360-player/" title="360&deg; player UI">default 360&deg; UI</a>.</p>
+ 
 
 	<!-- customization crap -->
 
@@ -265,7 +267,7 @@ pre.block {
 			<!-- sm2 flash goes here -->
 		</div>
 
-	 	<h2 style="margin-top:1em">Inline list</h2>
+	 	
 
 		<div class="sm2-inline-list"> <!-- remove this class to have one item per line -->
 
