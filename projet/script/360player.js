@@ -60,7 +60,7 @@ function ThreeSixtyPlayer() {
     playNext: false,   // stop after one sound, or play through list until end
     autoPlay: false,   // start playing the first sound right away
     allowMultiple: false,  // let many sounds play at once (false = only one sound playing at a time)
-    loadRingColor: '#ccc', // how much has loaded
+    loadRingColor: '#666666', // how much has loaded
     playRingColor: '#000', // how much has played
     backgroundRingColor: '#eee', // color shown underneath load + play ("not yet loaded" color)
 
@@ -86,7 +86,7 @@ function ThreeSixtyPlayer() {
     waveformDataLineRatio: 0.64,
 
     // "spectrum frequency" option
-    useEQData: false,
+    useEQData: true,
     eqDataColor: '#339933',
     eqDataDownsample: 4, // use only one in X (of 256 values)
     eqDataOutside: true,
@@ -98,7 +98,7 @@ function ThreeSixtyPlayer() {
     peakDataOutside: true,
     peakDataLineRatio: 0.5,
 
-    useAmplifier: true, // "pulse" like a speaker
+    useAmplifier: false, // "pulse" like a speaker
 
     fontSizeMax: null, // set according to CSS
 
@@ -106,6 +106,7 @@ function ThreeSixtyPlayer() {
 
     useFavIcon: false // Experimental (also requires usePeakData: true).. Try to draw a "VU Meter" in the favicon area, if browser supports it (Firefox + Opera as of 2009)
 
+	
   };
 
   this.css = {
