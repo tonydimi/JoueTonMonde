@@ -59,7 +59,6 @@
 }
 
 .sm2-inline-list .ui360-vis .sm2-360ui {
- border:1px solid #eee;
  /* offset the border */
  margin-left:-1px;
  margin-top:-1px;
@@ -98,7 +97,7 @@
 }
 
 .sm2-inline-list .ui360-vis:hover a.sm2_link {
- background-color:#ffffff;
+ 
  *background-color:transparent; /* eh, screw IE. */
 }
 
