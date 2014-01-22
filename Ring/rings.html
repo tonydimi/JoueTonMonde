@@ -1,0 +1,80 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Rings</title>
+
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="flashblock.css">
+<link rel="stylesheet" type="text/css" href="360player.css">
+<link rel="stylesheet" type="text/css" href="360player-visualization.css">
+
+<!-- scripts -->
+<script src="berniecode-animator.js"></script>
+<script src="soundmanager2.js"></script>
+<script src="360player.js"></script>
+
+<script type="text/javascript">
+soundManager.setup({
+  // path to directory containing SM2 SWF
+  url: 'swf/'
+});
+
+threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
+threeSixtyPlayer.config.showHMSTime = true;
+
+// enable some spectrum stuffs
+threeSixtyPlayer.config.useWaveformData = true;
+threeSixtyPlayer.config.useEQData = true;
+
+// enable this in SM2 as well, as needed
+if (threeSixtyPlayer.config.useWaveformData) {
+  soundManager.flash9Options.useWaveformData = true;
+}
+
+if (threeSixtyPlayer.config.useEQData) {
+  soundManager.flash9Options.useEQData = true;
+}
+
+if (threeSixtyPlayer.config.usePeakData) {
+  soundManager.flash9Options.usePeakData = true;
+}
+
+if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
+  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
+  soundManager.preferFlash = true;
+}
+
+// favicon is expensive CPU-wise, but can be enabled.
+threeSixtyPlayer.config.useFavIcon = false;
+</script>
+
+
+<style type="text/css">
+body {
+ background-image: none;
+ background-color:#666;
+}
+
+.ui360 span {
+ vertical-align: top;
+}
+
+#myRing { margin-left:200px; }
+</style>
+
+</head>
+
+<body>
+
+<div id="myRing">
+    <div id="sm2-container">
+      <!-- sm2 flash goes here -->
+    </div>
+        <div class="sm2-inline-list"> <!-- remove this class to have one item per line -->
+            <div class="ui360 ui360-vis"><a href="dasModel.mp3">Kraftwerk "Das Model"</a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
